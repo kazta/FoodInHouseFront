@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Food } from '../food';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
-  constructor() { }
+  private url = "http://192.168.1.8:8080/api/getFoodById";
 
-  getFoods(restaurantId: number): Observable<Food[]>{
-    return of([
-      {id:1, name: "Hamburguesa de pollo", price: 12000},
-      {id:2, name: "Choriperro", price: 5000}
-    ]);
+  constructor(private http: HttpClient) { }
+
+  getFoods(restaurantId: String): Observable<Food[]>{
+    return this.http.get<Food[]>(this.url + "?id=" + restaurantId);
   }
 }

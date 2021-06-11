@@ -1,5 +1,8 @@
 export interface Food{
-    id: number;
+    id: string;
     name: string;
     price: number;
+    type: string;
+    _idRestaurant: string;
+    created_At: string;
 }

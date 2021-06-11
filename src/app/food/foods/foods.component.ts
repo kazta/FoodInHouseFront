@@ -23,8 +23,9 @@ export class FoodsComponent implements OnInit {
   }
 
   getFoods(): void{
-    //const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.foodService.getFoods(1).subscribe(foods => this.foods = foods);
+    const id = String(this.route.snapshot.paramMap.get('id'));
+    console.log(id);
+    this.foodService.getFoods(id).subscribe(foods => this.foods = foods);
   }
 
 }
