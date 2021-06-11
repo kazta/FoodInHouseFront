@@ -1,7 +1,7 @@
 export interface Restaurant{
     id: number;
     name: string;
-    time: number;
+    created_at: number;
     address: string;
-    food: string;
+    // food: string;
 }

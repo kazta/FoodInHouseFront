@@ -7,6 +7,7 @@ import { RestaurantsComponent } from './restaurant/restaurants/restaurants.compo
 import { FoodComponent } from './food/component/food.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FoodsComponent } from './food/foods/foods.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FoodsComponent } from './food/foods/foods.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
