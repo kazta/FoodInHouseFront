@@ -11,7 +11,7 @@ import { FoodService } from '../service/food.service';
 })
 export class FoodsComponent implements OnInit {
 
-  foods: Food[] = []
+  foods: Food[] = [];
 
   constructor(
     private route: ActivatedRoute, 
@@ -23,8 +23,8 @@ export class FoodsComponent implements OnInit {
   }
 
   getFoods(): void{
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.foodService.getFoods(id).subscribe(foods => this.foods = foods);
+    //const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.foodService.getFoods(1).subscribe(foods => this.foods = foods);
   }
 
 }
