@@ -6,7 +6,7 @@
 </p>
 <div class="restaurants">
     <div class="restaurant" *ngFor="let restaurant of restaurants">
-        <a href="#">
+        <a routerLink="/foods/restaurant/{{restaurant.id}}">
             <app-restaurant [restaurant]="restaurant"></app-restaurant>
         </a>
     </div>
