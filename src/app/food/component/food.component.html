@@ -6,8 +6,8 @@
         <div class="content">
             Hamburguesa doble carne, con una rica salsa <br><br>
             <b>Price:</b> ${{food.price}}
-            <input type="text" class="input input-cant">
+            <input [(ngModel)]="observation" type="text" class="input input-cant">
         </div>
-        <button class="button is-info button-circle"><i class="fas fa-plus"></i></button>
+        <button (click)="addFood(food)" class="button is-info button-circle"><i class="fas fa-plus"></i></button>
     </div>
 </div>

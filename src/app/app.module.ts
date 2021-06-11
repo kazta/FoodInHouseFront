@@ -7,6 +7,8 @@ import { RestaurantsComponent } from './restaurant/restaurants/restaurants.compo
 import { FoodComponent } from './food/component/food.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FoodsComponent } from './food/foods/foods.component';
+import { OrderComponent } from './order/component/order.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import { FoodsComponent } from './food/foods/foods.component';
     RestaurantComponent,
     RestaurantsComponent,
     FoodComponent,
-    FoodsComponent
+    FoodsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
