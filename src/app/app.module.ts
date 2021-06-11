@@ -6,13 +6,15 @@ import { RestaurantComponent } from './restaurant/component/restaurant.component
 import { RestaurantsComponent } from './restaurant/restaurants/restaurants.component';
 import { FoodComponent } from './food/component/food.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FoodsComponent } from './food/foods/foods.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantComponent,
     RestaurantsComponent,
-    FoodComponent
+    FoodComponent,
+    FoodsComponent
   ],
   imports: [
     BrowserModule,
