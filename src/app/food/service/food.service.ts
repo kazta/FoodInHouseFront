@@ -11,8 +11,8 @@ export class FoodService {
 
   getFoods(restaurantId: number): Observable<Food[]>{
     return of([
-      {},
-      {}
-    ])
+      {id:1, name: "Hamburguesa de pollo", price: 12000},
+      {id:2, name: "Choriperro", price: 5000}
+    ]);
   }
 }

@@ -1,1 +1,13 @@
-<p>food works!</p>
+<div *ngIf="food" class="card">
+    <div class="card-content">
+        <div class="media-content">
+            <p class="title is-4">{{food.name}}</p>
+        </div><br>
+        <div class="content">
+            Hamburguesa doble carne, con una rica salsa <br><br>
+            <b>Price:</b> ${{food.price}}
+            <input [(ngModel)]="observation" type="text" class="input input-cant">
+        </div>
+        <button (click)="addFood(food)" class="button is-info button-circle"><i class="fas fa-plus"></i></button>
+    </div>
+</div>

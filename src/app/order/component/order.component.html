@@ -1,0 +1,12 @@
+<div>
+    <div *ngFor="let item of order.items">
+        <button class="button is-danger button-circle-sm"><i class="fas fa-minus"></i></button>
+        <span class="title is-4">{{item.food.name}}</span><br>
+        <span class="title is-6">Cantidad: {{item.cant}}</span>
+        <span *ngIf="item.observation" class="title is-6"><br>Observación: {{item.observation}}</span>
+    </div>
+    <div *ngIf="order.total" class="total">
+        <b>Total:</b>
+        <samp>{{order.total}}</samp>
+    </div>
+</div>

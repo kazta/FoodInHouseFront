@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { OrderService } from 'src/app/order/service/order.service';
+import { Food } from '../food';
 
 @Component({
   selector: 'app-food',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodComponent implements OnInit {
 
-  constructor() { }
+  @Input() food?: Food;
+
+  observation: string = "";
+
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+  }
+
+  addFood(food:Food): void{
+    this.orderService.addItem(food, this.observation.trim());
   }
 
 }

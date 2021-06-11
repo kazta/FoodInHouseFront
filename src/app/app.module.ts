@@ -8,6 +8,8 @@ import { FoodComponent } from './food/component/food.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FoodsComponent } from './food/foods/foods.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderComponent } from './order/component/order.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { HttpClientModule } from '@angular/common/http';
     RestaurantComponent,
     RestaurantsComponent,
     FoodComponent,
-    FoodsComponent
+    FoodsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
